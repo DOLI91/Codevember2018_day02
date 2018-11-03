@@ -48,7 +48,7 @@ void main() {
 
     mat4 viewProjection = projectionMatrix * modelViewMatrix;
     vec3 noise = sinNoise(position, uTime);
-    vec3 pos = mix(position, position + noise, t);
+    vec3 pos = mix(position + noise, position, t);
     gl_Position = viewProjection * vec4(pos, 1.0);
 
     vUV = uv;

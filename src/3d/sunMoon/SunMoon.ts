@@ -17,7 +17,7 @@ export default class SunMoon extends THREE.Mesh {
     constructor(radius: number) {
 
         const geo: THREE.OctahedronBufferGeometry = new THREE.OctahedronBufferGeometry(radius, 8);
-        const texture: THREE.Texture = new THREE.TextureLoader().load('./assets/textures/sunrisesunset.png');
+        const texture: THREE.Texture = new THREE.TextureLoader().load('./assets/textures/sunrisesunsetlinear.png');
         texture.wrapS = THREE.ClampToEdgeWrapping;
         texture.wrapT = THREE.ClampToEdgeWrapping;
 
@@ -25,7 +25,7 @@ export default class SunMoon extends THREE.Mesh {
 
             uTex: {type: 't', value: texture},
             uTime: {type: 'f', value: 0.0},
-            uAnimSpeed: {type: 'f', value: 1.0  / 10.0},
+            uAnimSpeed: {type: 'f', value: 1.0  / 5.0},
             uTemporalF: {type: 'f', value: 0.84},
             uSpatialF: {type: 'f', value: 0.43},
             uFallOff: {type: 'f', value: 0.624}
