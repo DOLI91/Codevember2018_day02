@@ -17,7 +17,7 @@ export default class SunMoon extends THREE.Mesh {
     constructor(radius: number) {
 
         const geo: THREE.OctahedronBufferGeometry = new THREE.OctahedronBufferGeometry(radius, 8);
-        const texture: THREE.Texture = new THREE.TextureLoader().load('./assets/textures/sunmoontexture.png');
+        const texture: THREE.Texture = new THREE.TextureLoader().load('./assets/textures/sunrisesunset.png');
         texture.wrapS = THREE.ClampToEdgeWrapping;
         texture.wrapT = THREE.ClampToEdgeWrapping;
 

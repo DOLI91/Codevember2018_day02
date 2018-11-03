@@ -1,4 +1,4 @@
-import World3D from './3d/world3d';
+import World3D from './src/3d/world3d';
 
 class App {
 
