@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import renderer from './renderer';
-import Mouse from '../utils/Mouse';
 import OrbitControls from '../utils/OrbitControls';
 
 import SunMoon from './sunMoon/SunMoon';
@@ -22,7 +21,6 @@ export default class World3D {
     private renderToScreen: boolean;
     private sunMoon: SunMoon;
 
-    private mouse: Mouse;
     private time: THREE.Clock;
 
     constructor() {
@@ -39,7 +37,6 @@ export default class World3D {
 
         this.width = window.innerWidth;
         this.height = window.innerHeight;
-        this.mouse = new Mouse();
 
     }
 
@@ -92,7 +89,6 @@ export default class World3D {
 
         const dt: number = this.time.getDelta();
 
-        this.mouse.updatePosition3D(this.camera);
         this.sunMoon.animate(dt);
         this.render();
 
